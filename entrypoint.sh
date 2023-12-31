@@ -43,5 +43,5 @@ if [ -n "$IFACE" ]; then
         chown dhcpd:dhcpd "$data_dir/dhcpd.leases~"
     fi
 
-    exec /usr/sbin/dhcpd -4 -d -f -cf "$data_dir/dhcpd.conf" -lf "$data_dir/dhcpd.leases" $IFACE
+    exec /usr/sbin/dhcpd -4 -d -f --no-pid -cf "$data_dir/dhcpd.conf" -lf "$data_dir/dhcpd.leases" -user dhcpd -group dhcpd $IFACE
 fi
