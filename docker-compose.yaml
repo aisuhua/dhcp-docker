@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  dhcp-server:
+    build: .
+    image: aisuhua/dhcp-server:latest
+    command: enp60s0
+    restart: no
+    network_mode: host
+    ports:
+      - 67:67/udp
+    volumes:
+      - ./data:/data 
