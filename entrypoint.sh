@@ -29,10 +29,11 @@ if [ -n "$IFACE" ]; then
     # create user, to allow dhcpd using external files
     uid=$(stat -c%u "$data_dir")
     gid=$(stat -c%g "$data_dir")
+    dhcpd_uid=$(id -u dhcpd)
     if [ $gid -ne 0 ]; then
         groupmod -og $gid dhcpd
     fi
-    if [ $uid -ne 0 ]; then
+    if [ $uid -ne $dhcpd_uid ]; then
         usermod -ou $uid dhcpd
     fi
 
