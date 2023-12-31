@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -xe
 
 if [ -e "/sys/class/net/$1" ]; then
     IFACE="$1"
