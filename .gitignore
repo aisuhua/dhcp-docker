@@ -1,2 +1,3 @@
 data/dhcpd.leases
 data/dhcpd.leases~
+.env

@@ -4,7 +4,7 @@ services:
   dhcp-server:
     build: .
     image: aisuhua/dhcp-server:latest
-    command: enp60s0
+    command: "${INTERFACE}"
     restart: no
     network_mode: host
     ports:
