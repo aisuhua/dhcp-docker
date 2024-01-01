@@ -17,7 +17,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: aisuhua/dhcp-server
+          images: aisuhua/dhcp
           tags: |
             type=raw,value={{date 'YYYYMMDD'}}
             type=raw,value=latest

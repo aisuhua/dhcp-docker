@@ -1,4 +1,4 @@
-# DHCP Server 
+# DHCP
 
 ## Configure
 
@@ -9,7 +9,7 @@ First change the dhcp config file `data/dhcpd.conf`
 ### Docker
 
 ```sh
-docker run --rm --net host -v "$(pwd)/data":/data aisuhua/dhcp-server:latest <INTERFACE>
+docker run --rm --net host -v "$(pwd)/data":/data aisuhua/dhcp:latest <INTERFACE>
 ```
 
 ### Docker Compose

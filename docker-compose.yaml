@@ -1,9 +1,10 @@
 version: '3.9'
 
 services:
-  dhcp-server:
+  dhcp:
     build: .
-    image: aisuhua/dhcp-server:latest
+    image: aisuhua/dhcp:latest
+    container_name: dhcp
     command: "${INTERFACE}"
     restart: no
     network_mode: host
