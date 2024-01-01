@@ -9,7 +9,7 @@ First change the dhcp config file `data/dhcpd.conf`
 ### Docker
 
 ```sh
-docker run --rm --name dhcp-server --init --net host -v "$(pwd)/data":/data aisuhua/dhcp-server:latest <INTERFACE>
+docker run --rm --net host -v "$(pwd)/data":/data aisuhua/dhcp-server:latest <INTERFACE>
 ```
 
 ### Docker Compose
@@ -17,9 +17,8 @@ docker run --rm --name dhcp-server --init --net host -v "$(pwd)/data":/data aisu
 Change the interface
 
 ```yaml
-# docker-compose.yaml
-dhcp-server:
-  command: <INTERFACE>
+# .env
+INTERFACE=xxx
 ```
 
 Run
